@@ -1,80 +1,173 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>{{ page.title | append: ' - ' | append: site.title }}</title>
-    <link rel="stylesheet" type="text/css" href="/assets/main.css">
-    <link rel="stylesheet" type="text/css" href="/assets/default.css">
-    <link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
-    <link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>{{ page.title | append: ' - ' | append: site.title }}</title>
+	<link rel="stylesheet" type="text/css" href="/assets/main.css">
+	<link rel="stylesheet" type="text/css" href="/assets/default.css">
+	<link href="favicon.ico" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
+	<link href="favicon.ico" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
+	<link href="favicon.ico" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<script type="text/javascript" src="/assets/jquery.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+    		$('#showmenu').click(function(){
+    			if ($('.navi').is(':hidden')) {
+    				$('.navi').show(1000)
+    				$('.content').hide(1000)
+    			}else{
+    				$('.navi').hide(1000)
+    				$('.content').show(1000)
+    			}
+    		})
+    	})
+    </script>
 </head>
 <body>
-    <header>{% include header.html %}</header>
-    <div class="container">
-        <div class="navi">
-            <ul>
-            <li><a href='/'>Home</a></li>
-                <li><a href='/install.html'>Install</a></li>
-                <li><a href='/services'>Services</a></li>
-                <ul>
-                    <li><a href='/services/abair.html'>Abair.ie</a></li>
-                    <li><a href='/services/baidu.html'>Baidu</a></li>
-                    <li><a href='/services/collins.html'>Collins</a></li>
-                    <li><a href='/services/duden.html'>Duden</a></li>
-                    <li><a href='/services/ekho.html'>Ekho</a></li>
-                    <li><a href='/services/espeak.html'>eSpeak</a></li>
-                    <li><a href='/services/festival.html'>Festival</a></li>
-                    <li><a href='/services/fluencynl.html'>Fluency.nl</a></li>
-                    <li><a href='/services/google.html'>Google</a></li>
-                    <li><a href='/services/howjsay.html'>Howjsay</a></li>
-                    <li><a href='/services/imtranslator.html'>ImTranslator</a></li>
-                    <li><a href='/services/ispeech.html'>iSpeech</a></li>
-                    <li><a href='/services/sapi5.html'>MS SAPI</a></li>
-                    <li><a href='/services/naver.html'>NAVER</a></li>
-                    <li><a href='/services/neospeech.html'>NeoSpeech</a></li>
-                    <li><a href='/services/oddcast.html'>Oddcast</a></li>
-                    <li><a href='/services/say.html'>OS X</a></li>
-                    <li><a href='/services/oxford.html'>Oxford</a></li>
-                    <li><a href='/services/rhvoice.html'>RHVoice</a></li>
-                    <li><a href='/services/spanishdict.html'>SpanishDict</a></li>
-                    <li><a href='/services/pico2wave.html'>SVOX Pico</a></li>
-                    <li><a href='/services/ttsapicom.html'>TTS-API.com</a></li>
-                    <li><a href='/services/voicetext.html'>VoiceText</a></li>
-                    <li><a href='/services/wiktionary.html'>Wiktionary</a></li>
-                    <li><a href='/services/yandex.html'>Yandex</a></li>
-                    <li><a href='/services/youdao.html'>Youdao</a></li>
-                </ul>
-                <li><a href='/usage'>Usage</a></li>
-                <ul>
-                    <li><a href='/usage/editor.html'>Note Editor</a></li>
-                    <li><a href='/usage/browser.html'>Card Browser</a></li>
-                    <li><a href='/usage/on-the-fly.html'>On-the-Fly</a></li>
-                    <li><a href='/usage/presets.html'>Presets</a></li>
-                    <li><a href='/usage/groups.html'>Groups</a></li>
-                    <li><a href='/usage/removing.html'>Remove Audio</a></li>
-                </ul>
-                <li><a href='/config'>Config</a></li>
-                <ul>
-                <li><a href='/config/playback.html'>Playback</a></li>
-                    <li><a href='/config/text.html'>Text</a></li>
-                    <li><a href='/config/mp3s.html'>MP3s</a></li>
-                    <li><a href='/config/windows.html'>Windows</a></li>
-                    <li><a href='/config/advanced.html'>Advanced</a></li>
-                </ul>
-                <li><a href='/contribute.html'>Contribute</a></li>
-                <h1>Help</h1>
-                <li>Anki Add-on Support Forum</li>
-                <li>Issue Tracker for AwesomeTTS</li>
-                <h1>More</h1>
-                <li>AwesomeTTS on AnkiWeb</li>
-                <li>AwesomeTTS on GitHub</li>
-            </ul>
-        </div>
-        <div class="content">{{ content }}</div>
-    </div>
-    <footer>{% include footer.html %}</footer>
+	<header>{% include header.html %}</header>
+	<div class="container">
+		<div class="navi">
+			<ul>
+				<li>
+					<a href='/'>Home</a>
+				</li>
+				<li>
+					<a href='/install.html'>Install</a>
+				</li>
+				<li>
+					<a href='/services'>Services</a>
+				</li>
+				<ul>
+					<li>
+						<a href='/services/abair.html'>Abair.ie</a>
+					</li>
+					<li>
+						<a href='/services/baidu.html'>Baidu</a>
+					</li>
+					<li>
+						<a href='/services/collins.html'>Collins</a>
+					</li>
+					<li>
+						<a href='/services/duden.html'>Duden</a>
+					</li>
+					<li>
+						<a href='/services/ekho.html'>Ekho</a>
+					</li>
+					<li>
+						<a href='/services/espeak.html'>eSpeak</a>
+					</li>
+					<li>
+						<a href='/services/festival.html'>Festival</a>
+					</li>
+					<li>
+						<a href='/services/fluencynl.html'>Fluency.nl</a>
+					</li>
+					<li>
+						<a href='/services/google.html'>Google</a>
+					</li>
+					<li>
+						<a href='/services/howjsay.html'>Howjsay</a>
+					</li>
+					<li>
+						<a href='/services/imtranslator.html'>ImTranslator</a>
+					</li>
+					<li>
+						<a href='/services/ispeech.html'>iSpeech</a>
+					</li>
+					<li>
+						<a href='/services/sapi5.html'>MS SAPI</a>
+					</li>
+					<li>
+						<a href='/services/naver.html'>NAVER</a>
+					</li>
+					<li>
+						<a href='/services/neospeech.html'>NeoSpeech</a>
+					</li>
+					<li>
+						<a href='/services/oddcast.html'>Oddcast</a>
+					</li>
+					<li>
+						<a href='/services/say.html'>OS X</a>
+					</li>
+					<li>
+						<a href='/services/oxford.html'>Oxford</a>
+					</li>
+					<li>
+						<a href='/services/rhvoice.html'>RHVoice</a>
+					</li>
+					<li>
+						<a href='/services/spanishdict.html'>SpanishDict</a>
+					</li>
+					<li>
+						<a href='/services/pico2wave.html'>SVOX Pico</a>
+					</li>
+					<li>
+						<a href='/services/ttsapicom.html'>TTS-API.com</a>
+					</li>
+					<li>
+						<a href='/services/voicetext.html'>VoiceText</a>
+					</li>
+					<li>
+						<a href='/services/wiktionary.html'>Wiktionary</a>
+					</li>
+					<li>
+						<a href='/services/yandex.html'>Yandex</a>
+					</li>
+					<li>
+						<a href='/services/youdao.html'>Youdao</a>
+					</li>
+				</ul>
+				<li>
+					<a href='/usage'>Usage</a>
+				</li>
+				<ul>
+					<li>
+						<a href='/usage/editor.html'>Note Editor</a>
+					</li>
+					<li>
+						<a href='/usage/browser.html'>Card Browser</a>
+					</li>
+					<li>
+						<a href='/usage/on-the-fly.html'>On-the-Fly</a>
+					</li>
+					<li>
+						<a href='/usage/presets.html'>Presets</a>
+					</li>
+					<li>
+						<a href='/usage/groups.html'>Groups</a>
+					</li>
+					<li>
+						<a href='/usage/removing.html'>Remove Audio</a>
+					</li>
+				</ul>
+				<li>
+					<a href='/config'>Config</a>
+				</li>
+				<ul>
+					<li>
+						<a href='/config/playback.html'>Playback</a>
+					</li>
+					<li>
+						<a href='/config/text.html'>Text</a>
+					</li>
+					<li>
+						<a href='/config/mp3s.html'>MP3s</a>
+					</li>
+					<li>
+						<a href='/config/windows.html'>Windows</a>
+					</li>
+					<li>
+						<a href='/config/advanced.html'>Advanced</a>
+					</li>
+				</ul>
+				<li>
+					<a href='/contribute.html'>Contribute</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">{{ content }}</div>
+	</div>
+	<footer>{% include footer.html %}</footer>
 </body>
 </html>

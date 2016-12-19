@@ -9,6 +9,7 @@ header{
 	color: white;
 }
 header > div{
+	display: block;
 	float: left;
 	margin-left: 10px; 
 }
@@ -21,6 +22,9 @@ header .suptitle{
 }
 header .subtitle{
 	font-size: 12px;
+}
+header .title #showmenu{
+	display: none;
 }
 .container{
 	margin: 10px auto;
@@ -56,4 +60,53 @@ footer a{
 }
 footer a:visited{
 	color: white;
+}
+@media (max-width: 750px) {
+	header > div{
+		width: 100%;
+		clear: both;
+	}
+	header .logo{
+		display: none;
+	}
+	header .title{
+		text-align: center;
+	}
+	header .title #showmenu{
+		display: block;
+		font-size: 20px;
+		font-weight: bolder;
+		text-shadow: 0 2px 10px grey;
+	}
+	header .title #showmenu:hover{
+		cursor: pointer;
+	}
+	.navi{
+		display: none;
+		width: 100%;
+	}
+	.content{
+		width: 100%;
+	}
+	.navi{
+		text-align: center;
+	}
+	.navi > ul > li{
+		font-weight: bolder;
+		font-size: 18px;
+	}
+	.navi > ul {
+		padding: 0;
+		border:0px solid black;
+		margin-left: 0;
+	}
+	.navi > ul > ul{
+		border:grey 0px solid;
+		margin-left: 0;
+	}
+	.navi > ul > ul >li{
+		border:red 0px solid;
+		margin-left: 0; 
+		font-size: 14px;
+	}
 }
