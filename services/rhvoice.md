@@ -1,61 +1,25 @@
-{{!
-  ! AwesomeTTS text-to-speech add-on website
-  !
-  ! Copyright (C) 2015       Anki AwesomeTTS Development Team
-  ! Copyright (C) 2015       Dave Shifflett
-  !
-  ! This program is free software: you can redistribute it and/or modify
-  ! it under the terms of the GNU Affero General Public License as
-  ! published by the Free Software Foundation, either version 3 of the
-  ! License, or (at your option) any later version.
-  !
-  ! This program is distributed in the hope that it will be useful,
-  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ! GNU Affero General Public License for more details.
-  !
-  ! You should have received a copy of the GNU Affero General Public License
-  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  !}}
+---
+layout: default
+title: RHVoice
+---
 
-{{> above}}
 
-<figure style="width: 608px">
-    <img src="/services.rhvoice.png" width="608" height="426"
-      alt="AwesomeTTS note editor dialog with the RHVoice service activated">
+![AwesomeTTS note editor dialog with the RHVoice service activated](/assets/images/services.rhvoice.png)    &ldquo;Add TTS Audio to Note&rdquo; dialog with the RHVoice      service activated
 
-    <figcaption>&ldquo;Add TTS Audio to Note&rdquo; dialog with the RHVoice
-      service activated</figcaption>
-</figure>
+[RHVoice](//github.com/Olga-Yakovleva/RHVoice.html) is  a free and open source speech synthesizer for Russian, Georgian, English,  and Esperanto.
 
-<p><a href="//github.com/Olga-Yakovleva/RHVoice" rel="external">RHVoice</a> is
-  a free and open source speech synthesizer for Russian, Georgian, English,
-  and Esperanto.</p>
+## Windows Users
 
-<h2>Windows Users</h2>
+If using the installer package, most Windows users will actually use the  RHVoice service via the [Microsoft Speech API](/services/sapi5.html)  rather than direct access.
 
-<p>If using the installer package, most Windows users will actually use the
-  RHVoice service via the <a href="/services/sapi5">Microsoft Speech API</a>
-  rather than direct access.</p>
+## Linux Users
 
-<h2>Linux Users</h2>
+On Linux, AwesomeTTS must be able to find the `RHVoice-client`  binary in your system `$PATH` _and_ be able to discover  the list of installed voices. To find the voices, AwesomeTTS will search  `~/share/RHVoice/voices`, `~/usr/share/RHVoice/voices`,  `/usr/local/share/RHVoice/voices`, then finally  `/usr/share/RHVoice/voices`.
 
-<p>On Linux, AwesomeTTS must be able to find the <code>RHVoice-client</code>
-  binary in your system <code>$PATH</code> <em>and</em> be able to discover
-  the list of installed voices. To find the voices, AwesomeTTS will search
-  <code>~/share/RHVoice/voices</code>, <code>~/usr/share/RHVoice/voices</code>,
-  <code>/usr/local/share/RHVoice/voices</code>, then finally
-  <code>/usr/share/RHVoice/voices</code>.</p>
+Additionally, if the RHVoice service is not already running, AwesomeTTS  will try to start it directly by calling `RHVoice-service`.
 
-<p>Additionally, if the RHVoice service is not already running, AwesomeTTS
-  will try to start it directly by calling <code>RHVoice-service</code>.</p>
+## Options
 
-<h2>Options</h2>
+When using RHVoice directly, **speed**,  **pitch**, and **volume** can be adjusted.
 
-<p>When using RHVoice directly, <strong>speed</strong>,
-  <strong>pitch</strong>, and <strong>volume</strong> can be adjusted.</p>
-
-<p>If you are accessing RHVoice via the Microsoft Speech API on Windows, then
-  <strong>pitch</strong> will not be available.</p>
-
-{{> below}}
+If you are accessing RHVoice via the Microsoft Speech API on Windows, then  **pitch** will not be available.

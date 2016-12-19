@@ -1,58 +1,37 @@
+---
+layout: default
+title: 回音
+---
 
+[Ekho](http://www.eguidedog.net/ekho.php) is a  free and open-source text-to-speech software with support on Windows and  Linux.
 
-<p><a href="http://www.eguidedog.net/ekho.php" rel="external">Ekho</a> is a
-  free and open-source text-to-speech software with support on Windows and
-  Linux.</p>
+Ekho has support for Mandarin, Cantonese, Tibetan, and provisionally  Korean (Hangul). In addition, some lesser-known dialects are supported:  Zhaoan Hakka, a Taiwanese dialect, and Ngangien, a version of Chinese used  before the Yuan Dynasty.
 
-<p>Ekho has support for Mandarin, Cantonese, Tibetan, and provisionally
-  Korean (Hangul). In addition, some lesser-known dialects are supported:
-  Zhaoan Hakka, a Taiwanese dialect, and Ngangien, a version of Chinese used
-  before the Yuan Dynasty.</p>
+Language files are bundled with the Ekho software.
 
-<p>Language files are bundled with the Ekho software.</p>
+## Windows Users
 
-<h2>Windows Users</h2>
+If using the recommended installer package, most Windows users will  actually use the Ekho software via the [Microsoft  Speech API](/services/sapi5.html) rather than directly through calls to the ```ekho```  binary.
 
-<p>If using the recommended installer package, most Windows users will
-  actually use the Ekho software via the <a href="/services/sapi5">Microsoft
-  Speech API</a> rather than directly through calls to the <code>ekho</code>
-  binary.</p>
+## Linux Users
 
-<h2>Linux Users</h2>
+On Linux, AwesomeTTS must be able to find the ```ekho``` binary in  your system ```$PATH```.
 
-<p>On Linux, AwesomeTTS must be able to find the <code>ekho</code> binary in
-  your system <code>$PATH</code>.</p>
+Some Linux distributions have packages available, either from official  repositories or community-maintained ones (e.g. Ubuntu PPA, Arch User  Repository). In addition, the Ekho website also maintains some good  [Linux  installation instructions](http://www.eguidedog.net/doc_install_ekho.php), including how to compile and install from  source.
 
-<p>Some Linux distributions have packages available, either from official
-  repositories or community-maintained ones (e.g. Ubuntu PPA, Arch User
-  Repository). In addition, the Ekho website also maintains some good
-  <a rel="external" href="http://www.eguidedog.net/doc_install_ekho.php">Linux
-  installation instructions</a>, including how to compile and install from
-  source.</p>
+## Options
 
-<h2>Options</h2>
+![AwesomeTTS note editor dialog with the Ekho service activated](/assets/images/services.ekho.png)
 
-<figure style="width: 608px">
-    <img src="/services.ekho.png" width="608" height="426"
-      alt="AwesomeTTS note editor dialog with the Ekho service activated">
+&ldquo;Add TTS Audio to Note&rdquo; dialog with the Ekho      service activated
 
-    <figcaption>&ldquo;Add TTS Audio to Note&rdquo; dialog with the Ekho
-      service activated</figcaption>
-</figure>
+When using Ekho directly, several &ldquo;delta&rdquo; options are available  that produce altered output that is measured as percentages of the baseline  speech playback that Ekho usually produces.
 
-<p>When using Ekho directly, several &ldquo;delta&rdquo; options are available
-  that produce altered output that is measured as percentages of the baseline
-  speech playback that Ekho usually produces.</p>
+*   **Speed Delta**
+*   **Pitch Delta**
+*   **Rate Delta:** scales both the speed and pitch at the      same time
+*   **Volume Delta**
 
-<ul>
-    <li><strong>Speed Delta</strong></li>
-    <li><strong>Pitch Delta</strong></li>
-    <li><strong>Rate Delta:</strong> scales both the speed and pitch at the
-      same time</li>
-    <li><strong>Volume Delta</strong></li>
-</ul>
+Note that if you are accessing Ekho via the Microsoft Speech API on  Windows, then only **Speed** and **Volume** will  be available.
 
-<p>Note that if you are accessing Ekho via the Microsoft Speech API on
-  Windows, then only <strong>Speed</strong> and <strong>Volume</strong> will
-  be available.</p>
 

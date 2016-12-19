@@ -1,79 +1,36 @@
-{{!
-  ! AwesomeTTS text-to-speech add-on website
-  !
-  ! Copyright (C) 2014-2015  Anki AwesomeTTS Development Team
-  ! Copyright (C) 2014-2015  Dave Shifflett
-  !
-  ! This program is free software: you can redistribute it and/or modify
-  ! it under the terms of the GNU Affero General Public License as
-  ! published by the Free Software Foundation, either version 3 of the
-  ! License, or (at your option) any later version.
-  !
-  ! This program is distributed in the hope that it will be useful,
-  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ! GNU Affero General Public License for more details.
-  !
-  ! You should have received a copy of the GNU Affero General Public License
-  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  !}}
+---
+layout: default
+title: 高级
+---
 
-{{> above}}
 
-<figure style="width: 534px">
-    <img src="/config.advanced.png" width="534" height="573"
-      alt="AwesomeTTS configuration dialog with the Advanced tab selected">
 
-    <figcaption>&ldquo;Advanced&rdquo; configuration tab</figcaption>
-</figure>
+![AwesomeTTS configuration dialog with the Advanced tab selected](/assets/images/config.advanced.png)    &ldquo;Advanced&rdquo; configuration tab
 
-<p>The &ldquo;Advanced&rdquo; tab allows the user to setup service presets and
-  groups, update the add-on, and manage cached media.</p>
+The &ldquo;Advanced&rdquo; tab allows the user to setup service presets and  groups, update the add-on, and manage cached media.
 
-<h2>Service Presets and Groups</h2>
+## Service Presets and Groups
 
-<p>Service presets allow on-demand playback of selected text and also easy
-  recall of service configurations from AwesomeTTS dialogs. Service groups are
-  lists of two or more presets for randomized or fallback-enabled playback.
-  For more, see <a href="/usage/presets">how to use service presets</a> and
-  <a href="/usage/groups">how to use service groups</a>.</p>
+Service presets allow on-demand playback of selected text and also easy  recall of service configurations from AwesomeTTS dialogs. Service groups are  lists of two or more presets for randomized or fallback-enabled playback.  For more, see [how to use service presets](/usage/presets.html) and  [how to use service groups](/usage/groups.html).
 
-<h2>Updates</h2>
+## Updates
 
-<p><strong>As of the v1.0.0 release,</strong> by default, AwesomeTTS
-  automatically checks for updates when you open a user profile for the first
-  time in an Anki session.</p>
+**As of the v1.0.0 release,** by default, AwesomeTTS  automatically checks for updates when you open a user profile for the first  time in an Anki session.
 
-<p>From this section, you can disable the update checker from running
-  automatically and you can also manually do a one-time check for updates.</p>
+From this section, you can disable the update checker from running  automatically and you can also manually do a one-time check for updates.
 
-<h2>Caching</h2>
+## Caching
 
-<h3>Audio Files</h3>
+### Audio Files
 
-<p>Whenever AwesomeTTS records or plays audio, it caches the resulting MP3
-  locally. This improves the speed and performance of successive requests for
-  the same audio, notably when using <a href="/usage/on-the-fly">on-the-fly
-  mode</a>.</p>
+Whenever AwesomeTTS records or plays audio, it caches the resulting MP3  locally. This improves the speed and performance of successive requests for  the same audio, notably when using [on-the-fly  mode](/usage/on-the-fly.html).
 
-<p>AwesomeTTS will only cache one MP3 file for a given combination of service,
-  input text, and service options. The MP3 files are relatively small. They
-  are stored in <code>Anki/addons/awesometts/.cache</code> as part of your
-  Anki user profile.</p>
+AwesomeTTS will only cache one MP3 file for a given combination of service,  input text, and service options. The MP3 files are relatively small. They  are stored in `Anki/addons/awesometts/.cache` as part of your  Anki user profile.
 
-<p>You can set how long you want files in your cache to remain before they are
-  automatically deleted at the end of your Anki session. You can also delete
-  the entire cache at any time by clicking &ldquo;Delete Files&rdquo;.</p>
+You can set how long you want files in your cache to remain before they are  automatically deleted at the end of your Anki session. You can also delete  the entire cache at any time by clicking &ldquo;Delete Files&rdquo;.
 
-<h3>Failures</h3>
+### Failures
 
-<p>Whenever AwesomeTTS tries to play or record audio from an Internet-based
-  service but is unable to do so, it remembers the failure for the remainder
-  of your session or up to one hour (whichever is shorter). This improves the
-  performance of large <a href="/usage/groups">groups</a> when some service
-  presets in the group cannot always produce audio.</p>
+Whenever AwesomeTTS tries to play or record audio from an Internet-based  service but is unable to do so, it remembers the failure for the remainder  of your session or up to one hour (whichever is shorter). This improves the  performance of large [groups](/usage/groups.html) when some service  presets in the group cannot always produce audio.
 
-<p>You can tell AwesomeTTS to forget failures at any time by clicking
-  &ldquo;Forget Failures&rdquo;.</p>
-
-{{> below}}
+You can tell AwesomeTTS to forget failures at any time by clicking  &ldquo;Forget Failures&rdquo;.

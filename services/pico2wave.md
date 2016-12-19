@@ -1,55 +1,23 @@
-{{!
-  ! AwesomeTTS text-to-speech add-on website
-  !
-  ! Copyright (C) 2014       Anki AwesomeTTS Development Team
-  ! Copyright (C) 2014       Dave Shifflett
-  !
-  ! This program is free software: you can redistribute it and/or modify
-  ! it under the terms of the GNU Affero General Public License as
-  ! published by the Free Software Foundation, either version 3 of the
-  ! License, or (at your option) any later version.
-  !
-  ! This program is distributed in the hope that it will be useful,
-  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ! GNU Affero General Public License for more details.
-  !
-  ! You should have received a copy of the GNU Affero General Public License
-  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  !}}
+---
+layout: default
+title: SVOX Pico
+---
 
-{{> above}}
 
-<figure style="width: 608px">
-    <img src="/services.pico2wave.png" width="608" height="426"
-      alt="AwesomeTTS note editor dialog w/ the SVOX Pico service activated">
+![AwesomeTTS note editor dialog w/ the SVOX Pico service activated](/assets/images/services.pico2wave.png)    &ldquo;Add TTS Audio to Note&rdquo; dialog with the SVOX Pico      service activated
 
-    <figcaption>&ldquo;Add TTS Audio to Note&rdquo; dialog with the SVOX Pico
-      service activated</figcaption>
-</figure>
+SVOX Pico is a small-footprint text-to-speech engine distributed with the  Android operating system, but it can also be run on Linux and other POSIX  systems.
 
-<p>SVOX Pico is a small-footprint text-to-speech engine distributed with the
-  Android operating system, but it can also be run on Linux and other POSIX
-  systems.</p>
+Supported languages include:
 
-<p>Supported languages include:</p>
+*   English (British, American)
+*   French
+*   German
+*   Italian
+*   Spanish
 
-<ul>
-    <li>English (British, American)</li>
-    <li>French</li>
-    <li>German</li>
-    <li>Italian</li>
-    <li>Spanish</li>
-</ul>
+## Requirements
 
-<h2>Requirements</h2>
+AwesomeTTS must be able to find the `pico2wave` binary (or,  alternatively, the same binary under the name `lt-pico2wave`) in  your system `$PATH`.
 
-<p>AwesomeTTS must be able to find the <code>pico2wave</code> binary (or,
-  alternatively, the same binary under the name <code>lt-pico2wave</code>) in
-  your system <code>$PATH</code>.</p>
-
-<p>Some Linux distributions have packages available for SVOX Pico. Debian and
-  Ubuntu users can install it via the <kbd>libttspico-utils</kbd> package, and
-  Arch Linux users can find it on the AUR under <kbd>svox-pico-git</kbd>.</p>
-
-{{> below}}
+Some Linux distributions have packages available for SVOX Pico. Debian and  Ubuntu users can install it via the libttspico-utils package, and  Arch Linux users can find it on the AUR under svox-pico-git.

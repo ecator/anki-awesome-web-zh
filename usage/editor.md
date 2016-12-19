@@ -27,14 +27,14 @@ This method, along with the [on-the-fly method](on-the-fly.html) or the on-deman
 
 ### Screenshots
 
-  <img src="/assets/images/usage.editor.button.png" width="644" height="440" alt="Mouse hovers the speaker toolbar icon in the note editor">
+  ![Mouse hovers the speaker toolbar icon in the note editor](/assets/images/usage.editor.button.png)
 
  Note editor AwesomeTTS button 
 
-  <img src="/assets/images/usage.editor.screen.png" width="644" height="440" alt="Mouse hovers &ldquo;Record&rdquo; button">
+  ![Mouse hovers &ldquo;Record&rdquo; button](/assets/images/usage.editor.screen.png)
 
  Recorder dialog 
 
-  <img src="/assets/images/usage.editor.yield.png" width="644" height="440" alt="Note seen with a new [sound] tag in one of the input fields">
+  ![Note seen with a new [sound](/assets/images/usage.editor.yield.png)
 
  Note afterward 

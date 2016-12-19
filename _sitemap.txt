@@ -1,0 +1,3 @@
+(browser|editor|groups|on-the-fly|presets|removing|abair|baidu|collins|duden|ekho|espeak|festival|fluencynl|google|howjsay|imtranslator|ispeech|naver|neospeech|oddcast|oxford|pico2wave|rhvoice|sapi5|say|spanishdict|ttsapicom|voicetext|wiktionary|yandex|youdao|advanced|mp3s|playback|text|windows)\)
+
+\1.html)

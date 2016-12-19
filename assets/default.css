@@ -61,6 +61,9 @@ footer a{
 footer a:visited{
 	color: white;
 }
+.gemoji{
+	vertical-align: text-bottom;
+}
 @media (max-width: 750px) {
 	header > div{
 		width: 100%;

@@ -1,62 +1,24 @@
-{{!
-  ! AwesomeTTS text-to-speech add-on website
-  !
-  ! Copyright (C) 2014       Anki AwesomeTTS Development Team
-  ! Copyright (C) 2014       Dave Shifflett
-  !
-  ! This program is free software: you can redistribute it and/or modify
-  ! it under the terms of the GNU Affero General Public License as
-  ! published by the Free Software Foundation, either version 3 of the
-  ! License, or (at your option) any later version.
-  !
-  ! This program is distributed in the hope that it will be useful,
-  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ! GNU Affero General Public License for more details.
-  !
-  ! You should have received a copy of the GNU Affero General Public License
-  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  !}}
+---
+layout: default
+title: Festival
+---
 
-{{> above}}
+![AwesomeTTS note editor dialog with the Festival service activated](/assets/images/services.festival.png) &ldquo;Add TTS Audio to Note&rdquo; dialog with the Festival service activated
 
-<figure style="width: 608px">
-    <img src="/services.festival.png" width="608" height="426"
-      alt="AwesomeTTS note editor dialog with the Festival service activated">
+[Festival](http://www.cstr.ed.ac.uk/projects/festival.html) is a speech synthesis system developed by the Centre for Speech Technology Research at the University of Edinburgh with additional contributions from Carnegie Mellon University and others.
 
-    <figcaption>&ldquo;Add TTS Audio to Note&rdquo; dialog with the Festival
-      service activated</figcaption>
-</figure>
+## Requirements
 
-<p><a href="http://www.cstr.ed.ac.uk/projects/festival"
-  rel="external">Festival</a> is a speech synthesis system developed by the
-  Centre for Speech Technology Research at the University of Edinburgh with
-  additional contributions from Carnegie Mellon University and others.</p>
+AwesomeTTS currently only supports Festival on Linux.
 
-<h2>Requirements</h2>
+For AwesomeTTS to be able to use Festival, it must be able to find the `festival` and `text2wave` binaries in the system `$PATH` _and_ it must be able to discover which voices you have installed in your `/usr/share/festival/voices`.
 
-<p>AwesomeTTS currently only supports Festival on Linux.</p>
+## Voices
 
-<p>For AwesomeTTS to be able to use Festival, it must be able to find the
-  <code>festival</code> and <code>text2wave</code> binaries in the system
-  <code>$PATH</code> <em>and</em> it must be able to discover which voices you
-  have installed in your <code>/usr/share/festival/voices</code>.</p>
+Festival usually comes with support for a few languages, but additional voice packages can be downloaded separately. Some additional information can be found at the [Festvox project website](http://festvox.org).
 
-<h2>Voices</h2>
+If your Linux distribution happens to install Festival voices to some directory other than `/usr/share/festival/voices`, please [report it to AwesomeTTS](/contribute.html) and support can be added for your distribution.
 
-<p>Festival usually comes with support for a few languages, but additional
-  voice packages can be downloaded separately. Some additional information can
-  be found at the <a href="http://festvox.org" rel="external">Festvox project
-  website</a>.</p>
+## Options
 
-<p>If your Linux distribution happens to install Festival voices to some
-  directory other than <code>/usr/share/festival/voices</code>, please
-  <a href="/contribute">report it to AwesomeTTS</a> and support can be added
-  for your distribution.</p>
-
-<h2>Options</h2>
-
-<p>When using Festival, only the <strong>Volume</strong> of the voice is
-  available for adjustment.</p>
-
-{{> below}}
+When using Festival, only the **Volume** of the voice is available for adjustment.

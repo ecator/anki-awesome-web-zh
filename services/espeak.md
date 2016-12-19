@@ -1,154 +1,96 @@
-{{!
-  ! AwesomeTTS text-to-speech add-on website
-  !
-  ! Copyright (C) 2014       Anki AwesomeTTS Development Team
-  ! Copyright (C) 2014       Dave Shifflett
-  !
-  ! This program is free software: you can redistribute it and/or modify
-  ! it under the terms of the GNU Affero General Public License as
-  ! published by the Free Software Foundation, either version 3 of the
-  ! License, or (at your option) any later version.
-  !
-  ! This program is distributed in the hope that it will be useful,
-  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ! GNU Affero General Public License for more details.
-  !
-  ! You should have received a copy of the GNU Affero General Public License
-  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  !}}
+---
+layout: default
+title: eSpeak
+---
 
-{{> above}}
+[eSpeak](http://espeak.sourceforge.net) is a small, light-weight, free and open-source speech synthesizer available for Windows and Linux, providing text-to-speech support for a wide array of languages.
 
-<p><a href="http://espeak.sourceforge.net" rel="external">eSpeak</a> is a
-  small, light-weight, free and open-source speech synthesizer available for
-  Windows and Linux, providing text-to-speech support for a wide array of
-  languages.</p>
+Supported languages include:
 
-<p>Supported languages include:</p>
+* Afrikaans
+* Albanian
+* Aragonese
+* Armenian
+* Bosnian
+* Brazil
+* Bulgarian
+* Cantonese
+* Catalan
+* Croatian
+* Czech
+* Danish
+* Dutch
+* English
+* Esperanto
+* Estonian
+* Finnish
+* French
+* Georgian
+* German
+* Greek
+* Greek
+* Hindi
+* Hungarian
+* Icelandic
+* Indonesian
+* Irish
+* Italian
+* Kannada
+* Kurdish
+* Latin
+* Latvian
+* Lithuanian
+* Lojban
+* Macedonian
+* Malay
+* Mandarin
+* Nepali
+* Norwegian
+* Persian
+* Polish
+* Portugal
+* Punjabi
+* Romanian
+* Russian
+* Serbian
+* Slovak
+* Spanish
+* Swahili
+* Swedish
+* Tamil
+* Turkish
+* Vietnamese
+* Welsh
 
-<ul class="cols">
-    <li>Afrikaans</li>
-    <li>Albanian</li>
-    <li>Aragonese</li>
-    <li>Armenian</li>
-    <li>Bosnian</li>
-    <li>Brazil</li>
-    <li>Bulgarian</li>
-    <li>Cantonese</li>
-    <li>Catalan</li>
-    <li>Croatian</li>
-    <li>Czech</li>
-    <li>Danish</li>
-    <li>Dutch</li>
-    <li>English</li>
-    <li>Esperanto</li>
-    <li>Estonian</li>
-    <li>Finnish</li>
-    <li>French</li>
-    <li>Georgian</li>
-    <li>German</li>
-    <li>Greek</li>
-    <li>Greek</li>
-    <li>Hindi</li>
-    <li>Hungarian</li>
-    <li>Icelandic</li>
-    <li>Indonesian</li>
-    <li>Irish</li>
-    <li>Italian</li>
-    <li>Kannada</li>
-    <li>Kurdish</li>
-    <li>Latin</li>
-    <li>Latvian</li>
-    <li>Lithuanian</li>
-    <li>Lojban</li>
-    <li>Macedonian</li>
-    <li>Malay</li>
-    <li>Mandarin</li>
-    <li>Nepali</li>
-    <li>Norwegian</li>
-    <li>Persian</li>
-    <li>Polish</li>
-    <li>Portugal</li>
-    <li>Punjabi</li>
-    <li>Romanian</li>
-    <li>Russian</li>
-    <li>Serbian</li>
-    <li>Slovak</li>
-    <li>Spanish</li>
-    <li>Swahili</li>
-    <li>Swedish</li>
-    <li>Tamil</li>
-    <li>Turkish</li>
-    <li>Vietnamese</li>
-    <li>Welsh</li>
-</ul>
+Some additional regional dialects of some languages are also available.
 
-<p>Some additional regional dialects of some languages are also available.</p>
+## Windows Users
 
-<h2>Windows Users</h2>
+On Windows, AwesomeTTS can playback speech with eSpeak either directly or by way of the [Microsoft Speech API](/services/sapi5.html) method.
 
-<p>On Windows, AwesomeTTS can playback speech with eSpeak either directly or
-  by way of the <a href="/services/sapi5">Microsoft Speech API</a> method.</p>
+AwesomeTTS will be able to playback speech directly with eSpeak if it is able to find the `espeak` binary on the system. Currently, this is done by checking the Windows Registry for paths to the eSpeak installation. If this does not work, you may be able to help AwesomeTTS find the eSpeak installation by placing the directory that contains the `espeak` binary on your user&rsquo;s `PATH` in your system&rsquo;s environment variables.
 
-<p>AwesomeTTS will be able to playback speech directly with eSpeak if it is
-  able to find the <code>espeak</code> binary on the system. Currently, this
-  is done by checking the Windows Registry for paths to the eSpeak
-  installation. If this does not work, you may be able to help AwesomeTTS find
-  the eSpeak installation by placing the directory that contains the
-  <code>espeak</code> binary on your user&rsquo;s <code>PATH</code> in your
-  system&rsquo;s environment variables.</p>
+Users who run Anki off of an external storage device may have difficulty accessing eSpeak directly in this manner due to Windows security policies, and may need to use the Microsoft Speech API service instead. For a voice to be playable using the Microsoft Speech API, users must generally explicitly name it during the installation of eSpeak.
 
-<p>Users who run Anki off of an external storage device may have difficulty
-  accessing eSpeak directly in this manner due to Windows security policies,
-  and may need to use the Microsoft Speech API service instead. For a voice
-  to be playable using the Microsoft Speech API, users must generally
-  explicitly name it during the installation of eSpeak.</p>
+## Linux Users
 
-<h2>Linux Users</h2>
+On Linux, AwesomeTTS must be able to find the `espeak` binary in your system `$PATH`.
 
-<p>On Linux, AwesomeTTS must be able to find the <code>espeak</code> binary in
-  your system <code>$PATH</code>.</p>
+Most Linux distributions have packages available for eSpeak.
 
-<p>Most Linux distributions have packages available for eSpeak.</p>
+## MBROLA Voices
 
-<h2>MBROLA Voices</h2>
+In addition to the voices bundled with eSpeak, some users may want to use voices from the [MBROLA Project](http://tcts.fpms.ac.be/synthesis/mbrola.html). These voices can be identified in the eSpeak voices list by an `-mbrola-` infix in their names and are playable like any other eSpeak voice.
 
-<p>In addition to the voices bundled with eSpeak, some users may want to use
-  voices from the <a href="http://tcts.fpms.ac.be/synthesis/mbrola.html"
-  rel="external">MBROLA Project</a>. These voices can be identified in the
-  eSpeak voices list by an <code>-mbrola-</code> infix in their names and are
-  playable like any other eSpeak voice.</p>
+## Options
+ ![AwesomeTTS note editor dialog with the eSpeak service activated](/assets/images/services.espeak.png) &ldquo;Add TTS Audio to Note&rdquo; dialog with the eSpeak service activated
 
-<h2>Options</h2>
+When using eSpeak directly, several options are available to alter the output produced.
 
-<figure style="width: 608px">
-    <img src="/services.espeak.png" width="608" height="426"
-      alt="AwesomeTTS note editor dialog with the eSpeak service activated">
+* **Variant**: alters the base voice in some way, such as by gender, age, or speech affect
+* **Speed**
+* **Word Gap**: the pause placed in-between words, which can be tweaked separately from the speed for listeners who need help distinguishing between different words
+* **Pitch**
+* **Volume**
 
-    <figcaption>&ldquo;Add TTS Audio to Note&rdquo; dialog with the eSpeak
-      service activated</figcaption>
-</figure>
-
-<p>When using eSpeak directly, several options are available to alter the
-  output produced.</p>
-
-<ul>
-    <li><strong>Variant</strong>: alters the base voice in some way, such as
-      by gender, age, or speech affect</li>
-    <li><strong>Speed</strong></li>
-    <li><strong>Word Gap</strong>: the pause placed in-between words, which
-      can be tweaked separately from the speed for listeners who need help
-      distinguishing between different words</li>
-    <li><strong>Pitch</strong></li>
-    <li><strong>Volume</strong></li>
-</ul>
-
-<p>Note that if you are accessing eSpeak via the Microsoft Speech API on
-  Windows, then only <strong>Speed</strong> and <strong>Volume</strong> will
-  be available. <strong>Variant</strong> <em>can</em> be made available
-  through SAPI if you specify it during the eSpeak installation as part of the
-  language code (e.g. <kbd>en-us+whisper</kbd> for American English using the
-  &ldquo;whisper&rdquo; variant).</p>
-
-{{> below}}
+Note that if you are accessing eSpeak via the Microsoft Speech API on Windows, then only **Speed** and **Volume** will be available. **Variant** _can_ be made available through SAPI if you specify it during the eSpeak installation as part of the language code (e.g. en-us+whisper for American English using the &ldquo;whisper&rdquo; variant).

@@ -1,50 +1,13 @@
-{{!
-  ! AwesomeTTS text-to-speech add-on website
-  !
-  ! Copyright (C) 2014       Anki AwesomeTTS Development Team
-  ! Copyright (C) 2014       Dave Shifflett
-  !
-  ! This program is free software: you can redistribute it and/or modify
-  ! it under the terms of the GNU Affero General Public License as
-  ! published by the Free Software Foundation, either version 3 of the
-  ! License, or (at your option) any later version.
-  !
-  ! This program is distributed in the hope that it will be useful,
-  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ! GNU Affero General Public License for more details.
-  !
-  ! You should have received a copy of the GNU Affero General Public License
-  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  !}}
+---
+layout: default
+title: 使用方法
+---
 
-{{> above}}
 
-<p>AwesomeTTS supports three methods for text-to-speech playback:</p>
+AwesomeTTS supports three methods for text-to-speech playback:
 
-<ul>
-    <li><strong>Stored MP3 Audio Files</strong>, where you record the speech
-      for your cards ahead of time, inserting <code>[sound]</code> tags into
-      your <em>note fields</em>. Once generated, these tags are natively
-      understood by <em>all versions</em> of Anki, even without AwesomeTTS
-      installed.</li>
-    <li><strong>&ldquo;On-the-Fly&rdquo; Playback</strong>, where you insert
-      special <code>&lt;tts&gt;</code> tags into your <em>card templates</em>.
-      These special tags are understood by any <em>desktop</em> Anki client
-      with AwesomeTTS installed. No media files are stored or synchronized
-      with your collection, and audio is produced on-demand as you review your
-      cards.</li>
-    <li><strong>Speaking Selected Text w/ Preset Services or Groups of
-      Presets</strong>, where you save a list of service configurations that
-      you want to use ahead of time, and then playback specific highlighted
-      text using the AwesomeTTS context menu, on-demand and when you want it.
-      This method will work with the <em>desktop</em> version of Anki with
-      AwesomeTTS installed.</li>
-</ul>
+*   **Stored MP3 Audio Files**, where you record the speech      for your cards ahead of time, inserting `[sound]` tags into      your _note fields_. Once generated, these tags are natively      understood by _all versions_ of Anki, even without AwesomeTTS      installed.
+*   **&ldquo;On-the-Fly&rdquo; Playback**, where you insert      special `&lt;tts&gt;` tags into your _card templates_.      These special tags are understood by any _desktop_ Anki client      with AwesomeTTS installed. No media files are stored or synchronized      with your collection, and audio is produced on-demand as you review your      cards.
+*   **Speaking Selected Text w/ Preset Services or Groups of      Presets**, where you save a list of service configurations that      you want to use ahead of time, and then playback specific highlighted      text using the AwesomeTTS context menu, on-demand and when you want it.      This method will work with the _desktop_ version of Anki with      AwesomeTTS installed.
 
-<p>Most users will pick one method or another, but some users may choose to
-  combine them. Which method(s) you choose will depend on where and how you
-  use Anki, how complex your collection is, how much fine-tuning you like to
-  do, and possibly other factors.</p>
-
-{{> below}}
+Most users will pick one method or another, but some users may choose to  combine them. Which method(s) you choose will depend on where and how you  use Anki, how complex your collection is, how much fine-tuning you like to  do, and possibly other factors.

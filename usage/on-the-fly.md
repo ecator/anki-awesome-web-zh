@@ -1,176 +1,60 @@
-{{!
-  ! AwesomeTTS text-to-speech add-on website
-  !
-  ! Copyright (C) 2014-2015  Anki AwesomeTTS Development Team
-  ! Copyright (C) 2014-2015  Dave Shifflett
-  !
-  ! This program is free software: you can redistribute it and/or modify
-  ! it under the terms of the GNU Affero General Public License as
-  ! published by the Free Software Foundation, either version 3 of the
-  ! License, or (at your option) any later version.
-  !
-  ! This program is distributed in the hope that it will be useful,
-  ! but WITHOUT ANY WARRANTY; without even the implied warranty of
-  ! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  ! GNU Affero General Public License for more details.
-  !
-  ! You should have received a copy of the GNU Affero General Public License
-  ! along with this program.  If not, see <http://www.gnu.org/licenses/>.
-  !}}
+---
+layout: default
+title: 在线发音
+---
 
-{{> above}}
+The easiest way to add TTS to your cards is to edit the template(s) they  use to wrap a &lt;tts&gt; HTML tag around the text you want  spoken. You can use the normal Anki template placeholders within these tags.  Additionally, you may opt to hide all or individual &lt;tts&gt;  tags if you want to display something else or nothing at all (e.g. for  listening comprehension cards).
 
-<p>The easiest way to add TTS to your cards is to edit the template(s) they
-  use to wrap a <kbd>&lt;tts&gt;</kbd> HTML tag around the text you want
-  spoken. You can use the normal Anki template placeholders within these tags.
-  Additionally, you may opt to hide all or individual <kbd>&lt;tts&gt;</kbd>
-  tags if you want to display something else or nothing at all (e.g. for
-  listening comprehension cards).</p>
+This and the [presets method](presets.html) are best for  users who only need TTS playback while using the desktop version of Anki  with AwesomeTTS installed. Users who use Anki on mobile devices (e.g. with  AnkiDroid) or on AnkiWeb may want to instead store `[sound]` tags  via the [note editor](editor.html) or  [card browser](browser.html) methods.
 
-<p>This and the <a href="presets" rel="next">presets method</a> are best for
-  users who only need TTS playback while using the desktop version of Anki
-  with AwesomeTTS installed. Users who use Anki on mobile devices (e.g. with
-  AnkiDroid) or on AnkiWeb may want to instead store <code>[sound]</code> tags
-  via the <a href="editor">note editor</a> or
-  <a href="browser" rel="prev">card browser</a> methods.</p>
+## Instructions
 
-<h2>Instructions</h2>
+1.  From the note editor (or the card browser with a card selected), click      the &ldquo;Cards&rdquo; button.
+2.  Review your existing card template, and then click the &ldquo;Add      TTS&rdquo; button.
+3.  Select your desired service and configure any options.
+4.  Type a sample phrase and then click &ldquo;Preview&rdquo; to confirm      that your audio is as you would like it to sound.
+5.  If you have a specific note field you would like AwesomeTTS to read      from, select it from the field dropdown.
+6.  If you would like to hide the inside of the TTS tag (e.g. because you        have a listening comprehension card and you do not want to see the        text displayed), change the visibility dropdown to either:
+        *   _Hide just this tag with inline CSS_ to insert the tag              with additional styling that creates a local rule on just the              new tag to not be shown
+    *   _Add rule to hide any TTS tag for this note type_ to              add a styling rule to all of the cards for this note so that no              <samp>&lt;tts&gt;</samp> tag used anywhere in any card will be              visible7.  Select on which side of the template you want AwesomeTTS to play the      audio.
+8.  Click the &ldquo;Insert&rdquo; button.
+9.  Clean up any duplicate or unwanted text in your template.
 
-<ol>
-    <li>From the note editor (or the card browser with a card selected), click
-      the &ldquo;Cards&rdquo; button.</li>
-    <li>Review your existing card template, and then click the &ldquo;Add
-      TTS&rdquo; button.</li>
-    <li>Select your desired service and configure any options.</li>
-    <li>Type a sample phrase and then click &ldquo;Preview&rdquo; to confirm
-      that your audio is as you would like it to sound.</li>
-    <li>If you have a specific note field you would like AwesomeTTS to read
-      from, select it from the field dropdown.</li>
-    <li>
-        If you would like to hide the inside of the TTS tag (e.g. because you
-        have a listening comprehension card and you do not want to see the
-        text displayed), change the visibility dropdown to either:
+### Can I selectively disable or modify the TTS output for certain cards?
 
-        <ul>
-            <li><em>Hide just this tag with inline CSS</em> to insert the tag
-              with additional styling that creates a local rule on just the
-              new tag to not be shown</li>
-            <li><em>Add rule to hide any TTS tag for this note type</em> to
-              add a styling rule to all of the cards for this note so that no
-              <samp>&lt;tts&gt;</samp> tag used anywhere in any card will be
-              visible</li>
-        </ul>
-    </li>
-    <li>Select on which side of the template you want AwesomeTTS to play the
-      audio.</li>
-    <li>Click the &ldquo;Insert&rdquo; button.</li>
-    <li>Clean up any duplicate or unwanted text in your template.</li>
-</ol>
+If the TTS quality for a particular note phrase is poor, you might want to  disable it or replace it with a manually-generated sound.
 
-<h3>Can I selectively disable or modify the TTS output for certain cards?</h3>
+To disable it, add a &ldquo;No TTS&rdquo; field to the note  type, add a &ldquo;1&rdquo; in that field for the affected notes,  and then modify your template to look like this:
+`{{=<%disable mustache%>=}}```{{^No TTS}}`&lt;tts service="yandex" voice="ar"&gt;`{{/No TTS}}`    `{{Front}}``{{^No TTS}}`&lt;/tts&gt;`{{/No TTS}}``<%disable=`{{ }}`=mustache%>
 
-<p>If the TTS quality for a particular note phrase is poor, you might want to
-  disable it or replace it with a manually-generated sound.</p>
+To use a manually-generated sound, add a &ldquo;Sound&rdquo;  field to the note type, generate an audio file and insert it into the field  as a <samp>[sound:xxx]</samp> tag, and then modify your template to look  like this:
+`{{=<%disable mustache%>=}}```{{Sound}}``{{^Sound}}`&lt;tts service="yandex" voice="ar"&gt;`{{/Sound}}`    `{{Front}}``{{^Sound}}`&lt;/tts&gt;`{{/Sound}}``<%disable=`{{ }}`=mustache%>
 
-<p>To disable it, add a &ldquo;<kbd>No TTS</kbd>&rdquo; field to the note
-  type, add a &ldquo;<kbd>1</kbd>&rdquo; in that field for the affected notes,
-  and then modify your template to look like this:</p>
+If you would prefer to avoid complicating your templates, you may also opt  to create a new note type that doesn&rsquo;t use on-the-fly TTS, and move  the affected notes to that new note type.
 
-{{=<%disable mustache%>=}}
-<pre>{{^No TTS}}&lt;tts service="yandex" voice="ar"&gt;{{/No TTS}}
-    {{Front}}
-{{^No TTS}}&lt;/tts&gt;{{/No TTS}}</pre>
-<%disable={{ }}=mustache%>
+### Other Hints
 
-<p>To use a manually-generated sound, add a &ldquo;<kbd>Sound</kbd>&rdquo;
-  field to the note type, generate an audio file and insert it into the field
-  as a <samp>[sound:xxx]</samp> tag, and then modify your template to look
-  like this:</p>
+*   You can test the on-the-fly functionality from the &ldquo;Front      Preview&rdquo; and &ldquo;Back Preview&rdquo; panes by side-clicking on      the pane and opening the AwesomeTTS menu.
+*   To toggle automatic playback of the &lt;tts&gt; tags or to      change the shortcut keys, go to the [Playback      tab of the configuration screen](/config/playback.html).
+*   AwesomeTTS can automatically filter out certain text while processing      your notes, like text within parentheses. How it handles cloze deletion      placeholders can also be adjusted depending on your needs. To see these      settings, go to the [Text tab of the configuration      screen](/config/text.html).
+*   If you want to use a [Preset](presets.html) for on-the-fly      feedback, you can use the preset attribute, e.g.:      &lt;tts preset="My Yandex Preset"&gt;apple&lt;/tts&gt;
+*   If you want to use a [Group](groups.html) for on-the-fly      feedback, you can use the group attribute, e.g.:      &lt;tts group="Male English"&gt;automobile&lt;/tts&gt;
+    `{{=<%disable mustache%>=}}`*   You may use template variables in tag attributes, e.g.:          &lt;tts&nbsp;group="`{{group}}`"&gt;`{{text}}`&lt;/tts&gt;
+    <%disable=`{{ }}`=mustache%>*   You may nest your &lt;tts&gt; tags to play the same input        through multiple services. For example:`&lt;tts service="baidu" voice="en"&gt;    This will be read by the Baidu American English voice only.    &lt;tts service="yandex" voice="en-GB"&gt;        This will be read by both the Baidu American English and Yandex        British English voices.    &lt;/tts&gt;    This will be read by the Baidu American English voice only.&lt;/tts&gt;`
 
-{{=<%disable mustache%>=}}
-<pre>{{Sound}}
+### Screenshots
+![Mouse hovers the &ldquo;Cards&rdquo; button](/assets/images/usage.on-the-fly.button.png)        
 
-{{^Sound}}&lt;tts service="yandex" voice="ar"&gt;{{/Sound}}
-    {{Front}}
-{{^Sound}}&lt;/tts&gt;{{/Sound}}</pre>
-<%disable={{ }}=mustache%>
+Note editor &ldquo;Cards&rdquo; button                
 
-<p>If you would prefer to avoid complicating your templates, you may also opt
-  to create a new note type that doesn&rsquo;t use on-the-fly TTS, and move
-  the affected notes to that new note type.</p>
+![Mouse hovers the &ldquo;Add TTS&rdquo; button](/assets/images/usage.on-the-fly.initial.png)        
 
-<h3>Other Hints</h3>
+Card templates view                
 
-<ul>
-    <li>You can test the on-the-fly functionality from the &ldquo;Front
-      Preview&rdquo; and &ldquo;Back Preview&rdquo; panes by side-clicking on
-      the pane and opening the AwesomeTTS menu.</li>
-    <li>To toggle automatic playback of the <kbd>&lt;tts&gt;</kbd> tags or to
-      change the shortcut keys, go to the <a href="/config/playback">Playback
-      tab of the configuration screen</a>.</li>
-    <li>AwesomeTTS can automatically filter out certain text while processing
-      your notes, like text within parentheses. How it handles cloze deletion
-      placeholders can also be adjusted depending on your needs. To see these
-      settings, go to the <a href="/config/text">Text tab of the configuration
-      screen</a>.</li>
-    <li>If you want to use a <a href="presets">Preset</a> for on-the-fly
-      feedback, you can use the <kbd>preset</kbd> attribute, e.g.:
-      <kbd>&lt;tts preset="My Yandex Preset"&gt;apple&lt;/tts&gt;</kbd></li>
-    <li>If you want to use a <a href="groups">Group</a> for on-the-fly
-      feedback, you can use the <kbd>group</kbd> attribute, e.g.:
-      <kbd>&lt;tts group="Male English"&gt;automobile&lt;/tts&gt;</kbd></li>
-    {{=<%disable mustache%>=}}
-        <li>You may use template variables in tag attributes, e.g.:
-          <kbd>&lt;tts&nbsp;group="{{group}}"&gt;{{text}}&lt;/tts&gt;</kbd></li>
-    <%disable={{ }}=mustache%>
-    <li>
-        You may nest your <kbd>&lt;tts&gt;</kbd> tags to play the same input
-        through multiple services. For example:
+![Mouse hovers the &ldquo;Insert&rdquo; button](/assets/images/usage.on-the-fly.screen.png)        
 
-<pre>&lt;tts service="baidu" voice="en"&gt;
-    This will be read by the Baidu American English voice only.
+Template helper dialog                
 
-    &lt;tts service="yandex" voice="en-GB"&gt;
-        This will be read by both the Baidu American English and Yandex
-        British English voices.
-    &lt;/tts&gt;
+![&lt;tts&gt; tag seen in the front template panel](/assets/images/usage.on-the-fly.yield.png)        
 
-    This will be read by the Baidu American English voice only.
-&lt;/tts&gt;</pre>
-
-    </li>
-</ul>
-
-<h3>Screenshots</h3>
-
-<div class="grid">
-    <figure style="width: 644px">
-        <img src="/usage.on-the-fly.button.png" width="644" height="440"
-          alt="Mouse hovers the &ldquo;Cards&rdquo; button">
-
-        <figcaption>Note editor &ldquo;Cards&rdquo; button</figcaption>
-    </figure>
-
-    <figure style="width: 644px">
-        <img src="/usage.on-the-fly.initial.png" width="644" height="440"
-          alt="Mouse hovers the &ldquo;Add TTS&rdquo; button">
-
-        <figcaption>Card templates view</figcaption>
-    </figure>
-
-    <figure style="width: 644px">
-        <img src="/usage.on-the-fly.screen.png" width="644" height="440"
-          alt="Mouse hovers the &ldquo;Insert&rdquo; button">
-
-        <figcaption>Template helper dialog</figcaption>
-    </figure>
-
-    <figure style="width: 644px">
-        <img src="/usage.on-the-fly.yield.png" width="644" height="440"
-          alt="&lt;tts&gt; tag seen in the front template panel">
-
-        <figcaption>Card template afterward</figcaption>
-    </figure>
-</div>
-
-{{> below}}
+Card template afterward    
