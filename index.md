@@ -12,6 +12,7 @@ Several text-to-speech services can be used through AwesomeTTS, including ones t
 
 Both Anki and AwesomeTTS are free and open-source software. You can study the source code, make changes, and contribute back to the community.
 -->
+
 # 关于 AwesomeTTS
 
 AwesomeTTS可以非常方便地往[Anki](http://ankisrs.net/docs/manual.html)卡片添加语音。
@@ -19,6 +20,7 @@ AwesomeTTS可以非常方便地往[Anki](http://ankisrs.net/docs/manual.html)卡
 通过AwesomeTTS可以使用多个语音服务,包括那些在本地运行的桌面软件以及其他的语音服务。AwesomeTTS支持点播回放和卡片同步播放,它十分灵活，可以满足你的不同需求。
 
 <!-- 中文站加的内容 -->
+
 # 关于本站翻译
 
 本站只是AwesomeTTS英文网站的一个中文翻译副本,因为英文网站在国内无法正常访问，所以就做了这个中文版本的网站，旨在帮助各位Anki用户更好的使用AwesomeTTS这个插件。如果有条件者也可以直接访问[英文官网](https://ankiatts.appspot.com/)。

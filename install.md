@@ -42,20 +42,16 @@ Additionally, AwesomeTTS converts some services’ raw output to MP3s using the 
 
 
 
-<!-- ## Getting the Current Release -->
 ## 获取最新版本
 
-<!-- Tools menu showing an “Add-ons” submenu -->
+
 在Anki中找到 “Add-ons” 子菜单
 
 
-<!-- <img src='/assets/images/install.tools-menu.png'> -->
 ![tools-menu](/assets/images/install.tools-menu.png)
 
-<!-- Dialog box showing 301952613 in its “Code” field -->
 在代码文本框中填入“301952613”
 
-<!-- <img src='/assets/images/install.anki-dialog.png'> -->
 ![anki-dialog](/assets/images/install.anki-dialog.png)
 
 
@@ -81,19 +77,23 @@ Additionally, AwesomeTTS converts some services’ raw output to MP3s using the 
 
 
 <!-- ## Getting Updates -->
+
 ## 升级
 
 <!-- As of the v1.0.0 release, by default, AwesomeTTS will check for updates when you open a user profile for the first time in an Anki session. Updates can be automatically applied, installed later, or skipped as they are released. This functionality can also be turned off entirely on the Advanced tab of the configuration. -->
+
 请你放心，AwesomeTTS会自动升级，当提示有版本更新的时候你只需要点击确认即可:joy:。
 
 
 <!-- If you are on any version of AwesomeTTS that was released May 2014 or earlier (i.e. one that has alpha or beta in its version), you can update your version by following the “Getting the Current Release” instructions above. When Anki downloads the add-on code, the old add-on files will be overwritten and replaced with the new ones. -->
+
 如果你的版本是2014年5月之前的，那么就需要手动升级:joy_cat:，需要重新输入插件代码覆盖安装。
 
 
 ---
 
 <!-- ## Other Versions -->
+
 ## 其他版本
 
 <!-- Users who want or need to run a previous version of the add-on can download an archive from the historical release list on GitHub. These releases are no longer supported and do not receive any bug fixes. -->
@@ -109,4 +109,5 @@ Note that if you are using Mac OS X with Finder that the default operation when 
 ## Git
 
 <!-- Advanced users can also use the add-on via Git by cloning the repository from https://github.com/AwesomeTTS/AwesomeTTS.git. Included are scripts to copy or symlink the add-on files to your Anki installation. -->
+
 高级用户可以直接克隆```https://github.com/AwesomeTTS/AwesomeTTS.git```进行二次开发:kissing:。
