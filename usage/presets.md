@@ -27,7 +27,7 @@ This and the [on-the-fly method](on-the-fly.html) are best  for users who only n
 *   There is an &ldquo;AwesomeTTS&rdquo; option available on the context      menus elsewhere in Anki, such as in the individual note fields in the      note editor and the preview panes of the card layout editor.
 *   In review mode, the same options are available under the      &ldquo;More&rdquo; button.
 *   Once you have setup at least two service presets, you can configure      [groups of these presets](groups.html), which allows      for some advanced playback/recording scenarios.
-    `{{=<%disable mustache%>=}}`*   Presets can also be used in the [on-the-fly          playback mode](on-the-fly.html), which may be helpful if you want to specify which          service configuration to use via a template field, e.g.:          &lt;tts&nbsp;preset="`{{preset}}`"&gt;`{{text}}`&lt;/tts&gt;
+    `{{ "{{" }}=<%disable mustache%>=}}`*   Presets can also be used in the [on-the-fly          playback mode](on-the-fly.html), which may be helpful if you want to specify which          service configuration to use via a template field, e.g.:          &lt;tts&nbsp;preset="`{{ "{{" }}preset}}`"&gt;`{{ "{{" }}text}}`&lt;/tts&gt;
 
 ### Screenshots
 ![Mouse hovers the Manage Presets button in Configuration](/assets/images/usage.presets.config.png)        &ldquo;Manage&rdquo; button for Presets                

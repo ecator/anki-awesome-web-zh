@@ -27,7 +27,7 @@ Groups can be used with all generation dialogs in AwesomeTTS, the  [on-the-fly m
 
 *   When using the **randomized** mode, you can weight a      particular preset more heavily by including it in your list more than      once.
 *   The **in-order** mode can be helpful if you want to use      a dictionary service with a limited vocabulary (like      [Collins](/services/collins.html),      [Duden](/services/duden.html),      [Howjsay](/services/howjsay.html), or      [Oxford](/services/oxford.html)), and fallback to another      service with an unlimited vocabulary (like      [Yandex](/services/yandex.html)) if the dictionary service does      not have your word.
-    `{{=<%disable mustache%>=}}`*   You can specify a group to use via a template field in the          [on-the-fly playback mode](on-the-fly.html), e.g.:          &lt;tts&nbsp;group="`{{group}}`"&gt;`{{text}}`&lt;/tts&gt;
+    `{{ "{{" }}=<%disable mustache%>=}}`*   You can specify a group to use via a template field in the          [on-the-fly playback mode](on-the-fly.html), e.g.:          &lt;tts&nbsp;group="`{{ "{{" }}group}}`"&gt;`{{ "{{" }}text}}`&lt;/tts&gt;
 
 ### Screenshots
 ![mouse hovers the Manage Groups button in the Advanced tab](/assets/images/usage.groups.config.png)        Accessing the Manage Groups dialog                

@@ -25,10 +25,10 @@ This and the [presets method](presets.html) are best for  users who only need TT
 If the TTS quality for a particular note phrase is poor, you might want to  disable it or replace it with a manually-generated sound.
 
 To disable it, add a &ldquo;No TTS&rdquo; field to the note  type, add a &ldquo;1&rdquo; in that field for the affected notes,  and then modify your template to look like this:
-`{{=<%disable mustache%>=}}```{{^No TTS}}`&lt;tts service="yandex" voice="ar"&gt;`{{/No TTS}}`    `{{Front}}``{{^No TTS}}`&lt;/tts&gt;`{{/No TTS}}``<%disable=`{{ }}`=mustache%>
+`{{ "{{" }}=<%disable mustache%>=}}```{{ "{{" }}^No TTS}}`&lt;tts service="yandex" voice="ar"&gt;`{{ "{{" }}/No TTS}}`    `{{ "{{" }}Front}}``{{ "{{" }}^No TTS}}`&lt;/tts&gt;`{{ "{{" }}/No TTS}}``<%disable=`{{ "{{" }} }}`=mustache%>
 
 To use a manually-generated sound, add a &ldquo;Sound&rdquo;  field to the note type, generate an audio file and insert it into the field  as a <samp>[sound:xxx]</samp> tag, and then modify your template to look  like this:
-`{{=<%disable mustache%>=}}```{{Sound}}``{{^Sound}}`&lt;tts service="yandex" voice="ar"&gt;`{{/Sound}}`    `{{Front}}``{{^Sound}}`&lt;/tts&gt;`{{/Sound}}``<%disable=`{{ }}`=mustache%>
+`{{ "{{" }}=<%disable mustache%>=}}```{{ "{{" }}Sound}}``{{ "{{" }}^Sound}}`&lt;tts service="yandex" voice="ar"&gt;`{{ "{{" }}/Sound}}`    `{{ "{{" }}Front}}``{{ "{{" }}^Sound}}`&lt;/tts&gt;`{{ "{{" }}/Sound}}``<%disable=`{{ "{{" }} }}`=mustache%>
 
 If you would prefer to avoid complicating your templates, you may also opt  to create a new note type that doesn&rsquo;t use on-the-fly TTS, and move  the affected notes to that new note type.
 
@@ -39,8 +39,8 @@ If you would prefer to avoid complicating your templates, you may also opt  to c
 *   AwesomeTTS can automatically filter out certain text while processing      your notes, like text within parentheses. How it handles cloze deletion      placeholders can also be adjusted depending on your needs. To see these      settings, go to the [Text tab of the configuration      screen](/config/text.html).
 *   If you want to use a [Preset](presets.html) for on-the-fly      feedback, you can use the preset attribute, e.g.:      &lt;tts preset="My Yandex Preset"&gt;apple&lt;/tts&gt;
 *   If you want to use a [Group](groups.html) for on-the-fly      feedback, you can use the group attribute, e.g.:      &lt;tts group="Male English"&gt;automobile&lt;/tts&gt;
-    `{{=<%disable mustache%>=}}`*   You may use template variables in tag attributes, e.g.:          &lt;tts&nbsp;group="`{{group}}`"&gt;`{{text}}`&lt;/tts&gt;
-    <%disable=`{{ }}`=mustache%>*   You may nest your &lt;tts&gt; tags to play the same input        through multiple services. For example:`&lt;tts service="baidu" voice="en"&gt;    This will be read by the Baidu American English voice only.    &lt;tts service="yandex" voice="en-GB"&gt;        This will be read by both the Baidu American English and Yandex        British English voices.    &lt;/tts&gt;    This will be read by the Baidu American English voice only.&lt;/tts&gt;`
+    `{{ "{{" }}=<%disable mustache%>=}}`*   You may use template variables in tag attributes, e.g.:          &lt;tts&nbsp;group="`{{ "{{" }}group}}`"&gt;`{{ "{{" }}text}}`&lt;/tts&gt;
+    <%disable=`{{ "{{" }} }}`=mustache%>*   You may nest your &lt;tts&gt; tags to play the same input        through multiple services. For example:`&lt;tts service="baidu" voice="en"&gt;    This will be read by the Baidu American English voice only.    &lt;tts service="yandex" voice="en-GB"&gt;        This will be read by both the Baidu American English and Yandex        British English voices.    &lt;/tts&gt;    This will be read by the Baidu American English voice only.&lt;/tts&gt;`
 
 ### Screenshots
 ![Mouse hovers the &ldquo;Cards&rdquo; button](/assets/images/usage.on-the-fly.button.png)        

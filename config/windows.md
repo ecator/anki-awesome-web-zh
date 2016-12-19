@@ -23,7 +23,7 @@ For all of these, clicking on the associated shortcut button and then  striking 
 
 ## Additional Tips
 
-    `{{! n.b. Some of these are present but reworded on the Playback tab. }}`*   If you already have the card browser or an editor window open when      changing a shortcut, it will not take effect until the next time that      window is reopened.
+    `{{ "{{" }}! n.b. Some of these are present but reworded on the Playback tab. }}`*   If you already have the card browser or an editor window open when      changing a shortcut, it will not take effect until the next time that      window is reopened.
 *   Changing a shortcut to one that is already used by a native Anki      feature or already reserved by another add-on may not work, depending      on exactly what you set for what. Some experimentation may be necessary      to arrive at a comfortable configuration.
 *   To unset an window shortcut altogether, you can click its button and      then strike either Backspace or Delete.
 *   To set multiple shortcuts at the same time to the same key or key      combination, you can click both buttons and then strike your desired      shortcut once. All shortcuts will be set simultaneously.

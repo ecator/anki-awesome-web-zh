@@ -24,7 +24,7 @@ These options are used whenever AwesomeTTS parses content that came from a  note
 ### Cloze Deletion Handling
 
 Cloze deletions can be used within Anki for chopping out a bit of text  inside of a larger note that the studier must recall. For more about cloze  deletion or how Anki implements it within cards, see the [cloze deletion  topic in the manual](http://ankisrs.net/docs/manual.html#cloze-deletion). The cloze options will let you control how  AwesomeTTS handles these.
-`{{=<%disable mustache%>=}}`<table><tr>    <td>if your note field had&hellip;</td>    <td>Hello `{{c1::world}}`!</td>    <td>Hello `{{c1::world::place}}`!</td></tr><tr>    <td>then on a card front, Anki would render&hellip;</td>    <td><samp>Hello **[...]**!</samp></td>    <td><samp>Hello **[place]<strong>!</samp></td></tr><tr>    <td>then with &ldquo;read however Anki displayed it&rdquo; /
+`{{ "{{" }}=<%disable mustache%>=}}`<table><tr>    <td>if your note field had&hellip;</td>    <td>Hello `{{ "{{" }}c1::world}}`!</td>    <td>Hello `{{ "{{" }}c1::world::place}}`!</td></tr><tr>    <td>then on a card front, Anki would render&hellip;</td>    <td><samp>Hello **[...]**!</samp></td>    <td><samp>Hello **[place]<strong>!</samp></td></tr><tr>    <td>then with &ldquo;read however Anki displayed it&rdquo; /
       &nbsp; &nbsp; &ldquo;read as Anki would display on a card      front&rdquo;,
       AwesomeTTS would read&hellip;</td>    <td><samp>Hello ... !</samp></td>    <td><samp>Hello place!</samp></td></tr><tr>    <td>or with &ldquo;read w/ hint wrapped in ellipses&rdquo; /
       &nbsp; &nbsp; &ldquo;replace w/ hint wrapped in ellipses&rdquo;,
@@ -36,10 +36,10 @@ Cloze deletions can be used within Anki for chopping out a bit of text  inside o
 
 In addition, if you are using cloze with on-the-fly playback, and you only  want the revealed text to be spoken on the answer side (e.g. you have a  <samp>&lt;tts&gt;</samp> tag around the same field on both sides of your  template), you can do so by checking &ldquo;For cloze answers, read revealed  text only&rdquo;.
 
-### ``{{hint}}`` Fields
+### ``{{ "{{" }}hint}}`` Fields
 
-If AwesomeTTS encounters the output of a ``{{hint}}`` within one  of your <samp>&lt;tts&gt;</samp> template tags, you can instruct AwesomeTTS  to omit it from the spoken playback by checking &ldquo;Ignore `{{hint}}`  fields&rdquo;. Please note that this option does _not_ affect the  "hints" that are associated with cloze deletions, but rather specifically  the use of the ``{{hint}}`` tag.
-<%disable=`{{ }}`=mustache%>
+If AwesomeTTS encounters the output of a ``{{ "{{" }}hint}}`` within one  of your <samp>&lt;tts&gt;</samp> template tags, you can instruct AwesomeTTS  to omit it from the spoken playback by checking &ldquo;Ignore `{{ "{{" }}hint}}`  fields&rdquo;. Please note that this option does _not_ affect the  "hints" that are associated with cloze deletions, but rather specifically  the use of the ``{{ "{{" }}hint}}`` tag.
+<%disable=`{{ "{{" }} }}`=mustache%>
 
 ### Counting Adjacent Characters
 
