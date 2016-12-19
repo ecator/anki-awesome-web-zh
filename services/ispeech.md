@@ -1,0 +1,24 @@
+---
+layout: default
+title: ispeech
+---
+
+<a href="http://www.ispeech.org" rel="external noreferrer">iSpeech</a> is
+  an online speech platform that offers a text-to-speech API among its
+  offerings. Because it is online, iSpeech can be used on any operating
+  system.
+
+Unlike most online services AwesomeTTS integrates with, iSpeech requires
+  users to purchase an API key by visiting the iSpeech website and then
+  entering that API key into AwesomeTTS. Because users must pay to use it,
+  AwesomeTTS does not apply download throttling to it as it does other
+  Internet services.
+
+
+  iSpeech supports
+  <a href="http://www.ispeech.org/api#49630ddd8394f977050dbc53df0f73c6a1fd9d0d"
+     rel="external noreferrer">many different voice options</a>,
+  including multiple dialects and speakers of popular languages. Additionally,
+  AwesomeTTS makes available the <em>speed</em> and <em>pitch</em> options
+  available from the API.
+  

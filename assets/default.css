@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+header{
+	padding: 10px;
+	background-color: #333333;
+	overflow: hidden;
+	color: white;
+}
+header > div{
+	float: left;
+	margin-left: 10px; 
+}
+header .logo img{
+	height: 100%;
+}
+header .suptitle{
+	font-size: 30px;
+	font-weight: bolder;
+}
+header .subtitle{
+	font-size: 12px;
+}
+.container{
+	margin: 10px auto;
+	width: 100%;
+	border:red solid 0px;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	flex-direction: row;
+}
+.navi,.content{
+border:black solid 0px;
+}
+.navi{
+	width: 20%;
+}
+.navi ul{
+	list-style: none;
+}
+.content{
+	padding: 5px;
+	width: 79%;
+}
+footer{
+	padding: 12px;
+	background-color: #333333;
+	font-size: 12px;
+	color: white;
+}
+footer a{
+	color: white;
+	font-weight: bolder;
+	text-decoration: none;
+}
+footer a:visited{
+	color: white;
+}
