@@ -3,6 +3,8 @@ layout: default
 title: 杜登
 ---
 
+# 杜登-Duden
+
 <!-- [Duden](http://www.duden.de) is an  online dictionary with high-quality pronunciations of many common German  words. -->
 
 [杜登-Duden](http://www.duden.de)是一个可以在线生成德语发音的词典。

@@ -3,7 +3,7 @@ layout: default
 title: 百度翻译
 ---
 
-
+# 百度翻译
 <!-- [Baidu Translate](http://translate.baidu.com) is an online text-to-speech service offering high-quality playback in Chinese, English, Japanese, Portuguese, and Thai. -->
 
 [百度翻译](http://translate.baidu.com)是一个可以在线合成中文、英语、日语、葡萄牙语和泰语的服务。

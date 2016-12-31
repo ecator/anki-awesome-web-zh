@@ -3,6 +3,7 @@ layout: default
 title: 柯林斯
 ---
 
+# 柯林斯
 
 <!-- The [Collins Dictionary](http://www.collinsdictionary.com) is an online reference site that has high-quality human pronunciation of most common English, French, German, Spanish, Italian, and Chinese words. -->
 
