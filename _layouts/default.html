@@ -12,17 +12,15 @@
 	<link href="/favicon.ico" mce_href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<script type="text/javascript" src="/assets/jquery.js"></script>
 	<script type="text/javascript">
-    	$(document).ready(function(){
-    		$('#showmenu').click(function(){
-    			if ($('.navi').is(':hidden')) {
-    				$('.navi').show(1000)
-    				$('.content').hide(1000)
-    			}else{
-    				$('.navi').hide(1000)
-    				$('.content').show(1000)
-    			}
-    		})
-    	})
+		function showMenu(){
+    		if ($('.navi').is(':hidden')) {
+    			$('.navi').show(1000)
+    			$('.content').hide(1000)
+    		}else{
+    			$('.navi').hide(1000)
+    			$('.content').show(1000)
+    		}
+    	}
     </script>
 </head>
 <body>
