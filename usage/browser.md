@@ -42,7 +42,9 @@ AwesomeTTS可以通过卡片浏览器批量生成你选中笔记的音频文件�
 
 * AwesomeTTS在处理笔记的时候会自动过滤一些特殊的字符，比如包含括号的文本。AwesomeTTS处理填空（cloze）占位符的方式也可以自定义。如果想要知道如何设置可以参考[文本配置](/config/text.html):simple_smile:
 
-<!-- * If you make a mistake, you can undo your batch update by going to the<kbd>Edit</kbd> menu and selecting the <kbd>Undo AwesomeTTS BatchUpdate</kbd> option. -->
+<!-- * If you make a mistake, you can undo your batch update by going to the<kbd>Edit</kbd
+> menu and selecting the <kbd>Undo AwesomeTTS BatchUpdate</kbd
+> option. -->
 
 * 如果你不小心误操作，你可以通过Anki的编辑菜单来撤销上一步操作。
 
@@ -63,19 +65,25 @@ AwesomeTTS可以通过卡片浏览器批量生成你选中笔记的音频文件�
 ### 截图
 
 ![User selects multiple cards from the card browser](/assets/images/usage.browser.selection.png)
+
 > 在卡片浏览器中选中卡片
 
 ![Mouse hovers &ldquo;Add Audio to Selected&rdquo; option](/assets/images/usage.browser.action.png)
+
 > 选择“Add Audio to Selected”
 
 ![Mouse hovers &ldquo;Generate&rdquo; button](/assets/images/usage.browser.screen.png)
+
 > 批量生成对话框
 
 ![Dialog shown while MP3 generation is underway](/assets/images/usage.browser.progress.png)
+
 > 批量生成中
 
 ![Confirmation dialog announcing successful processing](/assets/images/usage.browser.success.png)
+
 > 确认窗口
 
 ![Example note with a new sound](/assets/images/usage.browser.yield.png)
+
 > 批量生成后的效果

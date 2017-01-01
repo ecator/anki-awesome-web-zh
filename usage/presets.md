@@ -38,13 +38,17 @@ title: 语音预设
 ### 截图
 
 ![Mouse hovers the Manage Presets button in Configuration](/assets/images/usage.presets.config.png)
+
 > “Manage Presets” 按钮
 
 ![Mouse hovers &ldquo;Record&rdquo; button](/assets/images/usage.presets.screen.png)
+
 > 设置对话框
 
 ![Note seen with a new sound](/assets/images/usage.presets.save.png)
+
 > 命名预设
 
 ![Note seen with a new sound](/assets/images/usage.presets.yield.png)
+
 > 右键菜单中利用预设来获取发音

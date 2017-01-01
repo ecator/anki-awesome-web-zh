@@ -48,19 +48,25 @@ title: 语音组合
 ### 截图
 
 ![mouse hovers the Manage Groups button in the Advanced tab](/assets/images/usage.groups.config.png)
+
 > 点击“Manage Groups”
 
 ![mouse hovers the add button in the Manage Groups dialog](/assets/images/usage.groups.initial.png)
+
 > 添加一个新的组合
 
 ![user enters &ldquo;Random Spanish&rdquo; as a group name](/assets/images/usage.groups.naming.png)
+
 > 命名你的组合
 
 ![several presets have been entered; mouse hovers OK button](/assets/images/usage.groups.added.png)
+
 > 服务预设列表
 
 ![&ldquo;Random Spanish&rdquo; shown in service dialog dropdown](/assets/images/usage.groups.dropdown.png)
+
 > 应用已添加的组合
 
 ![&ldquo;Random Spanish&rdquo; seen in the review context menu](/assets/images/usage.groups.context.png)
+
 > 右键选中文本用组合方式获取发音

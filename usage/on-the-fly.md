@@ -76,13 +76,17 @@ title: tts标签
 
 ### 截图
 ![Mouse hovers the &ldquo;Cards&rdquo; button](/assets/images/usage.on-the-fly.button.png)
+
 > 笔记编辑窗口中的“卡片”按钮             
 
 ![Mouse hovers the &ldquo;Add TTS&rdquo; button](/assets/images/usage.on-the-fly.initial.png)        
+
 > 模板预览
 
 ![Mouse hovers the &ldquo;Insert&rdquo; button](/assets/images/usage.on-the-fly.screen.png)
+
 > 模板设置窗口        
 
 ![&lt;tts&gt; tag seen in the front template panel](/assets/images/usage.on-the-fly.yield.png)
+
 > 添加完tts标签后的模板

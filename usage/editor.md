@@ -35,7 +35,9 @@ title: 通过编辑器添加
 
 - 如果你想取消生成的音频文件，你可以通过[卡片浏览器批量移除音频](removing.html)来撤销操作。
 
-<!-- - The default keyboard shortcut to launch AwesomeTTS from the note editor dialog is <kbd>Ctrl+T</kbd> (or <kbd>Cmd+T</kbd> on Mac OS X.html), which overrides the default Anki shortcut key for LaTeX. If you want to restore the LaTeX shortcut key, you can [change this in AwesomeTTS&rsquo;s window configuration](/config/windows.html). -->
+<!-- - The default keyboard shortcut to launch AwesomeTTS from the note editor dialog is <kbd>Ctrl+T</kbd
+> (or <kbd>Cmd+T</kbd
+> on Mac OS X.html), which overrides the default Anki shortcut key for LaTeX. If you want to restore the LaTeX shortcut key, you can [change this in AwesomeTTS&rsquo;s window configuration](/config/windows.html). -->
 
 - 默认的启动AwesomeTTS编辑窗口的快捷键是`Ctrl+T`（Mac OS X是`Cmd+T`），这覆盖了Anki默认启动LaTex的快捷键，如果你想恢复LaTex的快捷键请参考[窗口配置](/config/windows.html)
 
@@ -44,10 +46,13 @@ title: 通过编辑器添加
 ### 截图
 
 ![Mouse hovers the speaker toolbar icon in the note editor](/assets/images/usage.editor.button.png)
+
 > AwesomeTTS的小喇叭
 
 ![Mouse hovers &ldquo;Record&rdquo; button](/assets/images/usage.editor.screen.png)
+
 > 记录窗口 
 
 ![Note seen with a new sound](/assets/images/usage.editor.yield.png)
+
 > 处理后效果

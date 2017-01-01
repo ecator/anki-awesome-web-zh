@@ -27,25 +27,33 @@ AwesomeTTS当然也可以通过卡片浏览器来移除你选中卡片的`[sound
 
 ### 截图
 ![Example note with sound](/assets/images/usage.browser.yield.png)
+
 > 音频标签移除之前
 
 ![User selects multiple cards from the card browser](/assets/images/usage.browser.selection.png)
+
 > 在卡片浏览器中选择需要移除音频的卡片
 
 ![Mouse hovers &ldquo;Remove Audio from Selected&rdquo; option](/assets/images/usage.removing.action.png)
+
 > 从卡片浏览器中选择“Remove Audio from Selected”
 
 ![Mouse hovers &ldquo;Remove Now&rdquo; button](/assets/images/usage.removing.screen.png)
+
 > 批量移除选项窗口
 
 ![Confirmation dialog announcing successful processing](/assets/images/usage.removing.success.png)
+
 > 确认窗口
 
 ![Example note with sound](/assets/images/usage.removing.yield.png)
+
 > 移除音频标签后的效果
 
 ![Mouse hovers the &ldquo;Check Media&rdquo; menu item](/assets/images/usage.removing.check.png)
+
 > Anki主菜单的“检查媒体”选项（可选，如果你想完全删除实际音频文件的话）              
 
 ![Anki dialog showing disused media files](/assets/images/usage.removing.purge.png)
+
 > 删除没有被卡片引用的媒体文件

@@ -12,7 +12,7 @@ title: 百度翻译
 
  <!-- &ldquo;Add TTS Audio to Note&rdquo; dialog with the Baidu Translate service activated -->
 
- > 被激活的百度翻译提示框
+> 被激活的百度翻译提示框
 
 <!-- ## Requirements -->
 
