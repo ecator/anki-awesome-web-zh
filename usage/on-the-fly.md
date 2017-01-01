@@ -1,60 +1,88 @@
 ---
 layout: default
-title: 在线发音
+title: tts标签
 ---
+# 通过模板来实现在线发音
 
-The easiest way to add TTS to your cards is to edit the template(s) they  use to wrap a &lt;tts&gt; HTML tag around the text you want  spoken. You can use the normal Anki template placeholders within these tags.  Additionally, you may opt to hide all or individual &lt;tts&gt;  tags if you want to display something else or nothing at all (e.g. for  listening comprehension cards).
+<!-- The easiest way to add TTS to your cards is to edit the template(s) they  use to wrap a &lt;tts&gt; HTML tag around the text you want  spoken. You can use the normal Anki template placeholders within these tags.  Additionally, you may opt to hide all or individual &lt;tts&gt;  tags if you want to display something else or nothing at all (e.g. for  listening comprehension cards). -->
 
-This and the [presets method](presets.html) are best for  users who only need TTS playback while using the desktop version of Anki  with AwesomeTTS installed. Users who use Anki on mobile devices (e.g. with  AnkiDroid) or on AnkiWeb may want to instead store `[sound]` tags  via the [note editor](editor.html) or  [card browser](browser.html) methods.
+最简单的添加发音方式就是直接在模板中把你想发音的文本或者字段放在`tts`标签中。你可以在桌面版的Anki这么做，而且你还可以选择性地隐藏全部或者部分`tts`标签来达到听写的功能。
 
-## Instructions
+<!-- This and the [presets method](presets.html) are best for  users who only need TTS playback while using the desktop version of Anki  with AwesomeTTS installed. Users who use Anki on mobile devices (e.g. with  AnkiDroid) or on AnkiWeb may want to instead store `[sound]` tags  via the [note editor](editor.html) or  [card browser](browser.html) methods. -->
 
-1.  From the note editor (or the card browser with a card selected), click      the &ldquo;Cards&rdquo; button.
-2.  Review your existing card template, and then click the &ldquo;Add      TTS&rdquo; button.
-3.  Select your desired service and configure any options.
-4.  Type a sample phrase and then click &ldquo;Preview&rdquo; to confirm      that your audio is as you would like it to sound.
-5.  If you have a specific note field you would like AwesomeTTS to read      from, select it from the field dropdown.
-6.  If you would like to hide the inside of the TTS tag (e.g. because you        have a listening comprehension card and you do not want to see the        text displayed), change the visibility dropdown to either:
-        *   _Hide just this tag with inline CSS_ to insert the tag              with additional styling that creates a local rule on just the              new tag to not be shown
-    *   _Add rule to hide any TTS tag for this note type_ to              add a styling rule to all of the cards for this note so that no              <samp>&lt;tts&gt;</samp> tag used anywhere in any card will be              visible7.  Select on which side of the template you want AwesomeTTS to play the      audio.
-8.  Click the &ldquo;Insert&rdquo; button.
-9.  Clean up any duplicate or unwanted text in your template.
+这个方法和[服务预设](presets.html)方式对于只用安装了AwesomeTTS的桌面版本Anki学习的用户十分方便。如果你还使用移动版本的Anki那么推荐用[笔记编辑器](editor.html)或者[卡片浏览器](browser.html)来生成`[sound]`标签格式的音频。
 
-### Can I selectively disable or modify the TTS output for certain cards?
+<!-- ## Instructions -->
 
-If the TTS quality for a particular note phrase is poor, you might want to  disable it or replace it with a manually-generated sound.
+## 介绍
 
-To disable it, add a &ldquo;No TTS&rdquo; field to the note  type, add a &ldquo;1&rdquo; in that field for the affected notes,  and then modify your template to look like this:
-`{{ "{{" }}=<%disable mustache%>=}}```{{ "{{" }}^No TTS}}`&lt;tts service="yandex" voice="ar"&gt;`{{ "{{" }}/No TTS}}`    `{{ "{{" }}Front}}``{{ "{{" }}^No TTS}}`&lt;/tts&gt;`{{ "{{" }}/No TTS}}``<%disable=`{{ "{{" }} }}`=mustache%>
+1. 从笔记编辑器或者卡片浏览器中选择“卡片”按钮。
+2. 预览你的模板，点击 “Add TTS” 按钮。
+3. 选择一个你希望的语音服务，然后做一些配置。
+4. 输入一些测试文本，然后点击“预览（Preview）”来确认是否是你想要的结果。
+5. 如果你想让AwesomeTTS给特定的字段发音你可以在下拉框中添加进去。
+6. 如果你想隐藏tts标签的话（比如你想实现听写，所以不想看见原文），就选择“visibility”下拉框选择一种隐藏方式：
+	- “Hide just this tag with inline CSS” 是在当前tts标签中插入style属性实现，只对当前tts标签有效。
+	- “Add rule to hide any TTS tag” 是在全局style中添加隐藏属性，所以影响所有的tts标签。
 
-To use a manually-generated sound, add a &ldquo;Sound&rdquo;  field to the note type, generate an audio file and insert it into the field  as a <samp>[sound:xxx]</samp> tag, and then modify your template to look  like this:
-`{{ "{{" }}=<%disable mustache%>=}}```{{ "{{" }}Sound}}``{{ "{{" }}^Sound}}`&lt;tts service="yandex" voice="ar"&gt;`{{ "{{" }}/Sound}}`    `{{ "{{" }}Front}}``{{ "{{" }}^Sound}}`&lt;/tts&gt;`{{ "{{" }}/Sound}}``<%disable=`{{ "{{" }} }}`=mustache%>
+<!-- ### Can I selectively disable or modify the TTS output for certain cards? -->
 
-If you would prefer to avoid complicating your templates, you may also opt  to create a new note type that doesn&rsquo;t use on-the-fly TTS, and move  the affected notes to that new note type.
+### 我可以有选择地开启或者编辑当前卡片的tts标签功能吗？
 
-### Other Hints
+<!-- If the TTS quality for a particular note phrase is poor, you might want to  disable it or replace it with a manually-generated sound. -->
 
-*   You can test the on-the-fly functionality from the &ldquo;Front      Preview&rdquo; and &ldquo;Back Preview&rdquo; panes by side-clicking on      the pane and opening the AwesomeTTS menu.
-*   To toggle automatic playback of the &lt;tts&gt; tags or to      change the shortcut keys, go to the [Playback      tab of the configuration screen](/config/playback.html).
-*   AwesomeTTS can automatically filter out certain text while processing      your notes, like text within parentheses. How it handles cloze deletion      placeholders can also be adjusted depending on your needs. To see these      settings, go to the [Text tab of the configuration      screen](/config/text.html).
-*   If you want to use a [Preset](presets.html) for on-the-fly      feedback, you can use the preset attribute, e.g.:      &lt;tts preset="My Yandex Preset"&gt;apple&lt;/tts&gt;
-*   If you want to use a [Group](groups.html) for on-the-fly      feedback, you can use the group attribute, e.g.:      &lt;tts group="Male English"&gt;automobile&lt;/tts&gt;
-    `{{ "{{" }}=<%disable mustache%>=}}`*   You may use template variables in tag attributes, e.g.:          &lt;tts&nbsp;group="`{{ "{{" }}group}}`"&gt;`{{ "{{" }}text}}`&lt;/tts&gt;
-    <%disable=`{{ "{{" }} }}`=mustache%>*   You may nest your &lt;tts&gt; tags to play the same input        through multiple services. For example:`&lt;tts service="baidu" voice="en"&gt;    This will be read by the Baidu American English voice only.    &lt;tts service="yandex" voice="en-GB"&gt;        This will be read by both the Baidu American English and Yandex        British English voices.    &lt;/tts&gt;    This will be read by the Baidu American English voice only.&lt;/tts&gt;`
+:joy_cat:当然可以。如果你觉得当前卡片通过在线获取的发音质量不好，你可以选择性地让当前卡片（并不是整个笔记）的tts标签失效，从而替换成你自己手动生成的音频。
 
-### Screenshots
-![Mouse hovers the &ldquo;Cards&rdquo; button](/assets/images/usage.on-the-fly.button.png)        
+<!-- To disable it, add a &ldquo;No TTS&rdquo; field to the note  type, add a &ldquo;1&rdquo; in that field for the affected notes,  and then modify your template to look like this: -->
 
-Note editor &ldquo;Cards&rdquo; button                
+让tts标签失效（即不生成tts标签）的话，你可以添加一个“NO TTS”的字段，这可以作为一个判断字段，你可以填入数字“1”然后在模板中做如下修改：
+
+{% highlight vim %}
+{% raw %}
+{{^NO TTS}}<tts service="espeak" voice="en">{{/NO TTS}}
+{{Front}}
+{{^NO TTS}}</tts>{{/NO TTS}}
+{% endraw %}
+{% endhighlight %}
+
+为了使你手动添加的音频生效你可以添加一个“Sound”字段来存放你的音频，并且在以`[sound:xxx]`的形式填充这个字段，然后在模板中加入这个字段：
+
+{% highlight vim %}
+{% raw %}
+{{Sound}}
+{{^NO TTS}}<tts service="espeak" voice="en">{{/NO TTS}}
+{{Front}}
+{{^NO TTS}}</tts>{{/NO TTS}}
+{% endraw %}
+{% endhighlight %}
+
+<!-- If you would prefer to avoid complicating your templates, you may also opt  to create a new note type that doesn&rsquo;t use on-the-fly TTS, and move  the affected notes to that new note type. -->
+
+如果你觉得修改模板太复杂了，那么还是建议你新建一个不用tts标签的模板:crying_cat_face:把你需要自定义发音的卡片添加到新的笔记类型即可。
+
+<!-- ### Other Hints -->
+
+### 其他注意事项
+{% raw %}
+* 你可以在预览窗口通过右键选择“AwesomeTTS”菜单来测试这个功能。
+* 你可以通过配置[回放选项](/config/playback.html)来使`tts`标签中的内容自动播放或者改变快捷键。
+* AwesomeTTS在处理笔记的时候会自动过滤一些特殊的字符，比如包含括号的文本。AwesomeTTS处理填空（cloze）占位符的方式也可以自定义。如果想要知道如何设置可以参考[文本配置](/config/text.html):simple_smile:
+* 如果你想通过[服务预设](presets.html)来使用在线播放功能的话，你可以在tts标签中加入`preset`属性，比如：`<tts preset="My eSpeak Preset">apple</tts>`
+* 如果你想通过[组合](groups.html)来使用在线播放功能的话，你可以在tts标签中加入`group`属性，比如：`<tts group="Male English">automobile</tts>`
+* 你还可以用字段给特定的属性赋值来实现一些特殊要求，比如：` <tts group="{{group}}">{{text}}</tts>`
+{% endraw %}
+
+<!-- ### Screenshots -->
+
+### 截图
+![Mouse hovers the &ldquo;Cards&rdquo; button](/assets/images/usage.on-the-fly.button.png)
+> 笔记编辑窗口中的“卡片”按钮             
 
 ![Mouse hovers the &ldquo;Add TTS&rdquo; button](/assets/images/usage.on-the-fly.initial.png)        
+> 模板预览
 
-Card templates view                
+![Mouse hovers the &ldquo;Insert&rdquo; button](/assets/images/usage.on-the-fly.screen.png)
+> 模板设置窗口        
 
-![Mouse hovers the &ldquo;Insert&rdquo; button](/assets/images/usage.on-the-fly.screen.png)        
-
-Template helper dialog                
-
-![&lt;tts&gt; tag seen in the front template panel](/assets/images/usage.on-the-fly.yield.png)        
-
-Card template afterward    
+![&lt;tts&gt; tag seen in the front template panel](/assets/images/usage.on-the-fly.yield.png)
+> 添加完tts标签后的模板
