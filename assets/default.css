@@ -64,10 +64,15 @@ footer a:visited{
 .gemoji{
 	vertical-align: text-bottom;
 }
+/*移动设备*/
 @media (max-width: 750px) {
+	header{
+		padding: 0;
+	}
 	header > div{
 		width: 100%;
 		clear: both;
+		margin-left:0; 
 	}
 	header .logo{
 		display: none;
