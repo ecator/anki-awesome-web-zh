@@ -13,6 +13,13 @@ AwesomeTTS是Anki上一个非常强大的插件，但是AwesomeTTS官方网站�
 
 大家也许已经注意到了，所有页面都是**.md**结尾，其实每个页面都是用markdown语法编写，而AwesomeTTS中文网站就是采用Jekyll引擎搭建的，目前就是托管在GitHub上，这样的好处就是翻译的时候只用关心内容，而不必关心其他的样式排版，页面全部采用markdown语法编写，有易读性好的有点，比起传统的在html中修改的方式我觉得至少眼睛不会花:crying_cat_face:。
 
+# get-origin.sh
+一个获取AwesomeTTS最新源码的脚本，主要是获取官方网站内容参考，原理是利用git克隆最新的官方源码到_AwesomeTTS目录，网站源码在克隆目录下的web目录中。
+
+```
+./get-origin.sh
+```
+
 # 关于翻译流程
 翻译工程是巨大的，我也只是做了个模板，剩下的虽然只是照着英文网站写markdown，但是这需要大量的时间和深厚的翻译素养，关于具体的翻译流程请参考本项目[Wiki页面](https://github.com/ecator/anki-awesome-web-zh/wiki):clap:。
 
